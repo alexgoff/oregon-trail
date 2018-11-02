@@ -1,0 +1,22 @@
+/**
+ * Basic typography style for copy text
+ */
+
+ body {
+     color: $body-color;
+     font-size: 1.5rem;
+     font-family: 'Share Tech Mono', monospace;
+     line-height: 1.25;
+
+        ::selection {
+         background: $body-color; 
+         color: $body-bg;
+        }
+     }
+
+ a {
+     background-color: $body-color;
+     color: $body-bg;
+     text-decoration: none;
+     padding: 0 0.2rem;
+ }

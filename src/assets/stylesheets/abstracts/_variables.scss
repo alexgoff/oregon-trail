@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Colors
+// Not based on real CRT colors
+$english-holly: #031E11;
+$bright-turquoise: #14FDCE;
+
+$black: #000;
+
+// CRT colors
+$amber: #ffb000;
+$light-amber: #ffcc00;
+
+$green-1: #33ff00;
+$green-2: #00ff33;
+$green-3: #00ff66;
+
+$appleII: #33ff33;
+$appleIIc: #66ff66;
+
+$crt-bg: #282828;
+
+$body-bg: $crt-bg;
+$body-color: $appleII;
