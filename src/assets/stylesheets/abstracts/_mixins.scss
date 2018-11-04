@@ -2,3 +2,26 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@mixin themify($property, $key, $themes: $themes) {
+    // Iterate over the themes
+    @each $theme, $colors in $themes {
+        // Create a selector
+        &.theme-#{$theme},
+        .theme-#{$theme} & {
+        // Output the declaration
+        #{$property}: map-get($colors, $key);
+        }
+    }
+}
+
+@mixin background-color($arguments...) {
+  @include themify('background-color', $arguments...);
+}
+
+@mixin border-color($arguments...) {
+    @include themify('border-color', $arguments...);
+}
+
+@mixin color($arguments...) {
+    @include themify('color', $arguments...);
+}
