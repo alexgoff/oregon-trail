@@ -16,8 +16,13 @@
   'assets/stylesheets/base/helpers';
 
 // 4. Layout-related sections
+@import
+  'assets/stylesheets/layout/footer',
+  'assets/stylesheets/layout/nav';
 
 // 5. Components
 @import
+  'assets/stylesheets/components/button',
+  'assets/stylesheets/components/dropdown',
   'assets/stylesheets/components/sections';
 

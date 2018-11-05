@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import * as figlet from 'figlet';
+import { Component } from '@angular/core';
+// import { Themes } from './config/themes';
+// import * as figlet from 'figlet';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'oregon-trail';
-  // testString = ascii.font('test');
+export class AppComponent {
+  themes = [
+    'amber',
+    'light-amber',
+    'green-1',
+    'green-2',
+    'green-3',
+    'appleII',
+    'appleIIc'
+  ];
 
-  ngOnInit () {
-    figlet('Hello World!!', function(err, data) {
-      if (err) {
-          console.log('Something went wrong...');
-          console.dir(err);
-          return;
-      }
-      console.log(data)
-  });    
+  activeTheme = 'appleII'
+
+  changeTheme(theme) {
+    this.activeTheme = theme;
   }
 }

@@ -1,10 +1,11 @@
-<main class="container theme-amber">
+<main class="container" [ngClass]="'theme-' + activeTheme">
+    <nav>
+        <ot-theme-switcher [activeTheme]="activeTheme" [themes]="themes" (changeTheme)="changeTheme($event)"></ot-theme-switcher>
+    </nav>
     <div class="scanlines"></div>
     <div class="content">
         <section>
-            {{testString}}
             <ot-generator></ot-generator>
-            <ot-theme-switcher></ot-theme-switcher>
         </section>
         <footer>
             <ot-footer></ot-footer>

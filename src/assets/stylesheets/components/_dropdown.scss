@@ -1,0 +1,18 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    background: $body-bg;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 1.85rem;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.btn-dropdown-item {
+    display: block;
+}
