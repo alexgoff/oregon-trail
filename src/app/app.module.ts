@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GeneratorComponent } from './components/generator/generator.component';
+import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switcher.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    ThemeSwitcherComponent
   ],
   imports: [
     BrowserModule,
