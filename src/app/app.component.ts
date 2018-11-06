@@ -15,12 +15,16 @@ export class AppComponent {
     'green-2',
     'green-3',
     'appleII',
-    'appleIIc'
+    'appleIIc',
   ];
 
   activeTheme = 'appleII'
 
   changeTheme(theme) {
-    this.activeTheme = theme;
+    this.activeTheme = 'none';
+
+    setTimeout(()=>{
+      this.activeTheme = theme;
+ }, 500);    
   }
 }

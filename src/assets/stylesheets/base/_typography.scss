@@ -2,24 +2,34 @@
  * Basic typography style for copy text
  */
 
- body {     
-     font-size: 1.5rem;
-     font-family: 'Share Tech Mono', monospace;
-     line-height: 1.25;
-     }
+body {     
+    font-size: 1.5rem;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.25;
+}
+
+::selection {
+    // this needs to be fixed, this mixin won't import
+    // @include background-color('primary');
+    background: #fff;
+    color: $body-bg;
+}
 
 main {
     @include color('primary');
-
-    // ::selection {
-    //     // @include background-color('primary');
-    //     color: $body-bg;
-    // }
 }
 
- a {
-     @include background-color('primary');
-     color: $body-bg;
-     text-decoration: none;
-     padding: 0 0.2rem;
- }
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    @include background-color('primary');
+    color: $body-bg;
+    text-decoration: none;
+    padding: 0 0.2rem;
+}
