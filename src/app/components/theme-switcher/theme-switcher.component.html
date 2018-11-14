@@ -1,11 +1,11 @@
 <div class="dropdown" (click)="clickInside($event)">
-    <button (click)="toggleDropdown()" [class.active]="dropdownVisible">
+    <button class="btn btn--borderless" (click)="toggleDropdown()" [class.active]="dropdownVisible">
         Display
     </button>
     <section class="dropdown-content" *ngIf="dropdownVisible">
         <ul>
             <ng-container *ngFor="let theme of themes">
-                <li><button (click)="setTheme(theme)" class="btn-dropdown-item" [class.active]="theme == activeTheme">{{theme}}</button></li>
+                <li><button (click)="setTheme(theme)" class="btn btn__dropdown-item" [class.active]="theme == activeTheme">{{theme}}</button></li>
             </ng-container>
         </ul>
     </section>
