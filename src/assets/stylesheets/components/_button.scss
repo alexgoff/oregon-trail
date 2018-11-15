@@ -1,14 +1,17 @@
-button {
+.btn {
     background: none;
-    border: none;
+    border: 2px solid;
+    border-radius: 2px;
     cursor: pointer;
-    font-size: 1.5rem;
-    font-family: 'Share Tech Mono', monospace;
+    font-size: $font-size-base;
+    font-family: $font-family;
     line-height: 1.25;
     padding: 0 0.25rem;
+    user-select: none;
     white-space: nowrap;
     
     @include color('primary');
+    @include border-color('primary');
 
     &:active,
     &.active,
@@ -16,5 +19,9 @@ button {
         @include background-color('primary');
         color: $body-bg;
         outline: none;
+    }
+
+    &--borderless {
+        border: none;
     }
 }

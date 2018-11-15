@@ -19,10 +19,10 @@
 
 @mixin background($arguments...) {
     @include themify('background', $arguments...);
-  }
+}
 
 @mixin background-color($arguments...) {
-  @include themify('background-color', $arguments...);
+    @include themify('background-color', $arguments...);
 }
 
 @mixin border-color($arguments...) {

@@ -13,8 +13,11 @@
     z-index: 1;
 }
 
-.btn-dropdown-item {
-    display: block;
-    text-align: left;
-    width: 100%;
+.btn {
+    &__dropdown-item {
+        border: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
 }

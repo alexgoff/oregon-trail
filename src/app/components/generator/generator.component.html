@@ -1,3 +1,8 @@
 <h1>Oregon Trail Name Generator</h1>
-<input type="text" class="input input--full-width">
-<button type="button" class="btn">Generate name</button>
+<p>Enter your own name, or saddle up with a brand new one.</p>
+<input type="text" class="input input--full-width" [(ngModel)]="originalName" name="originalName" autofocus>
+<button type="button" class="btn" (click)="generateName(originalName)">Saddle up partner</button>
+
+<p class="trailname">
+    <span id="trailName"></span>
+</p>
