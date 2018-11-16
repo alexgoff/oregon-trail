@@ -17,7 +17,7 @@ export class GeneratorComponent implements OnInit {
 
   options = {
     strings: [],
-    typeSpeed: 125
+    typeSpeed: 80
   }
 
 
