@@ -49,7 +49,7 @@ export class GeneratorComponent implements OnInit {
 
   generateName(name: string) {
     if(name === undefined || name.trim().length === 0) {
-      name = '[still working on your new name, cowpat]';
+      name = this._nameService.getName();
     }
 
     let prefix = this._nameService.getPrefix();

@@ -28,7 +28,13 @@
     z-index: 9999;
 }
 
+@keyframes crt-flicker {
+    0%,100% { opacity: 0.94; }
+    50% {opacity: 1; }
+}
+
 .content {
+    animation: crt-flicker 0.125s infinite linear;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

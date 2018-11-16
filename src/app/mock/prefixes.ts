@@ -25,6 +25,7 @@ export const PREFIXES = [
     "Buckaroo", 
     "Buffalo", 
     "Belt Buckle", 
+    "Bull",
     "Bullwhack", 
     "Cady", 
     "Calico", 
@@ -76,4 +77,5 @@ export const PREFIXES = [
     "Yellowbelly", 
     "Cattle Driver", 
     "Scurvy", 
-    "Cattle Tipper"]
+    "Cattle Tipper",
+    "Scallywag"]
