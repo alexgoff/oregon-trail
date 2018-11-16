@@ -1,7 +1,10 @@
 <h1>Oregon Trail Name Generator</h1>
 <p>Enter your own name, or hit the trail with a brand new one.</p>
-<input type="text" class="input input--full-width" [(ngModel)]="originalName" name="originalName" autofocus>
-<button type="button" class="btn" (click)="generateName(originalName)">Saddle up</button>
+<form>
+    <input type="text" class="input input--full-width" [(ngModel)]="originalName" name="originalName" autofocus>
+    <button type="submit" class="btn" (click)="generateName(originalName)">Saddle up</button>
+</form>
+
 
 <p class="trailname">
     <ng-container *ngIf="storedNames.length > 0">
