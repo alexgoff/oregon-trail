@@ -1,4 +1,4 @@
-# [OregonTrail](https://oregon-trail-f38b5.firebaseapp.com/)
+# [Oregon Trail](https://oregon-trail-f38b5.firebaseapp.com/)
 
 A work-in-progress application to generate names for riding the old dusty trail, in an old-school CRT display.
 
