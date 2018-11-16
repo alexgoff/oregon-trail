@@ -3,7 +3,13 @@ section {
     border-radius: 2px;
     flex-grow: 1;
     margin-bottom: 1rem;
-    padding: 2rem;
+    padding: 1rem;
 
     @include border-color('primary');
+}
+
+@media only screen and (min-width: $screen-lg) {
+    section {
+        padding: 2rem;
+    }
 }

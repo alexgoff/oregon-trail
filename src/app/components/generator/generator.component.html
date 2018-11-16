@@ -1,8 +1,14 @@
 <h1>Oregon Trail Name Generator</h1>
-<p>Enter your own name, or saddle up with a brand new one.</p>
+<p>Enter your own name, or hit the trail with a brand new one.</p>
 <input type="text" class="input input--full-width" [(ngModel)]="originalName" name="originalName" autofocus>
-<button type="button" class="btn" (click)="generateName(originalName)">Saddle up partner</button>
+<button type="button" class="btn" (click)="generateName(originalName)">Saddle up</button>
 
 <p class="trailname">
+    <ng-container *ngIf="storedNames.length > 0">
+        <ul>
+            <li *ngFor="let name of storedNames">{{name}}</li>
+        </ul>
+    </ng-container>
+
     <span id="trailName"></span>
 </p>

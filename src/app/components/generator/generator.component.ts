@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NameGeneratorService } from '../../services/name-generator.service';
 import Typed from 'typed.js';
 
 @Component({
@@ -8,8 +9,9 @@ import Typed from 'typed.js';
 })
 export class GeneratorComponent implements OnInit {
   originalName: string;
-  trailName: string;
   typed: Typed;
+
+  storedNames: string[] = [];
 
   target = "#trailName";
 
@@ -19,9 +21,9 @@ export class GeneratorComponent implements OnInit {
   }
 
 
-  constructor() {
+  constructor(private _nameService: NameGeneratorService) {
 
-   }
+  }
 
   ngOnInit() {
     this.typed = new Typed(this.target, this.options);
@@ -29,21 +31,31 @@ export class GeneratorComponent implements OnInit {
   }
 
   typeName(name) {
+
+    // if there is already a name that exists, put that name in the store names array
+    // type the new name
+
+    if(this.options.strings.length) {
+      this.storedNames.push(this.options.strings[0]);
+    }
+
     this.typed.destroy();
 
     this.options.strings = [];
     this.options.strings.push(name);
 
     this.typed = new Typed(this.target, this.options);
-
-    // need to preserve existing names and append new ones
   }
 
   generateName(name: string) {
+    if(name === undefined || name.trim().length === 0) {
+      name = '[still working on your new name, cowpat]';
+    }
 
-    // generate a name
+    let prefix = this._nameService.getPrefix();
+    let fullName = `${prefix} ${name}`;
 
-    this.typeName(name);
+    this.typeName(fullName);
   }
 
 }

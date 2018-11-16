@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GeneratorComponent } from './components/generator/generator.component';
 import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switcher.component';
 
+import { NameGeneratorService } from './services/name-generator.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switch
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    NameGeneratorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
