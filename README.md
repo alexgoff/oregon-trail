@@ -1,4 +1,10 @@
-# OregonTrail
+# [Oregon Trail](https://oregon-trail-f38b5.firebaseapp.com/)
+
+A work-in-progress application to generate names for riding the old dusty trail, in an old-school CRT display.
+
+Deployed to: https://oregon-trail-f38b5.firebaseapp.com/
+
+## Project Information
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
