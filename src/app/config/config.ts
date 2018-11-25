@@ -1,0 +1,5 @@
+export const CONFIG = {
+    "ALLITERATION_PROBABILITY" : 0.5,
+    "SUFFIX_PROBABILITY" : 0.5,
+    "POSTFIX_PROBABILITY" : 0.5
+}

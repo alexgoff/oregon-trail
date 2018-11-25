@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NameGeneratorService } from '../../services/name-generator.service';
 import Typed from 'typed.js';
+import { CONFIG } from '../../config/config';
 
 @Component({
   selector: 'ot-generator',
@@ -39,6 +40,7 @@ export class GeneratorComponent implements OnInit {
       this.storedNames.push(this.options.strings[0]);
     }
 
+    // destroy the currently typed name
     this.typed.destroy();
 
     this.options.strings = [];
@@ -48,12 +50,19 @@ export class GeneratorComponent implements OnInit {
   }
 
   generateName(name: string) {
+    let alliteration = (Math.random() < CONFIG.ALLITERATION_PROBABILITY) ? true : false;
+
+    // if no name has been entered, get one from the base names list
     if(name === undefined || name.trim().length === 0) {
       name = this._nameService.getName();
     }
 
-    let prefix = this._nameService.getPrefix();
+    let prefix = this._nameService.getPrefix(alliteration,name[0]);
+
+    // let prefix = this._nameService.getPrefix();
     let fullName = `${prefix} ${name}`;
+
+    console.log(fullName);
 
     this.typeName(fullName);
   }
