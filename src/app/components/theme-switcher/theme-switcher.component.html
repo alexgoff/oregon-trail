@@ -1,12 +1,10 @@
 <div class="dropdown" (click)="clickInside($event)">
-    <button class="btn btn--borderless" (click)="toggleDropdown()" [class.active]="dropdownVisible">
+    <button class="btn btn--borderless" (keydown.esc)="console.log('test');" (click)="toggleDropdown()" [class.active]="dropdownVisible" aria-haspopup="true" [attr.aria-expanded]="dropdownVisible">
         Display
     </button>
-    <section class="dropdown-content" *ngIf="dropdownVisible">
-        <ul>
+        <ul class="dropdown-content" *ngIf="dropdownVisible" role="menu">
             <ng-container *ngFor="let theme of themes">
-                <li><button (click)="setTheme(theme)" class="btn btn__dropdown-item" [class.active]="theme == activeTheme">{{theme}}</button></li>
+                <li><button (click)="setTheme(theme)" class="btn btn__dropdown-item" [class.active]="theme == activeTheme" role="menuitem">{{theme}}</button></li>
             </ng-container>
         </ul>
-    </section>
 </div>

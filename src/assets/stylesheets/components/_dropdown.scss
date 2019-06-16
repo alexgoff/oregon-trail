@@ -5,12 +5,15 @@
 
 .dropdown-content {
     background: $body-bg;
+    border: 2px solid;
     display: inline-block;
     position: absolute;
     left: 0;
     top: 1.85rem;
     padding: 1rem;
     z-index: 1;
+
+    @include border-color('primary');
 }
 
 .btn {
