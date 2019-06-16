@@ -62,8 +62,6 @@ export class GeneratorComponent implements OnInit {
     // let prefix = this._nameService.getPrefix();
     let fullName = `${prefix} ${name}`;
 
-    console.log(fullName);
-
     this.typeName(fullName);
   }
 

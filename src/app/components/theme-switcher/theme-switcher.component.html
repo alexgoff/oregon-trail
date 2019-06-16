@@ -1,5 +1,5 @@
 <div class="dropdown" (click)="clickInside($event)">
-    <button class="btn btn--borderless" (keydown.esc)="console.log('test');" (click)="toggleDropdown()" [class.active]="dropdownVisible" aria-haspopup="true" [attr.aria-expanded]="dropdownVisible">
+    <button class="btn btn--borderless" (keydown.esc)="dropdownVisible = false" (click)="toggleDropdown()" [class.active]="dropdownVisible" aria-haspopup="true" [attr.aria-expanded]="dropdownVisible">
         Display
     </button>
         <ul class="dropdown-content" *ngIf="dropdownVisible" role="menu">
