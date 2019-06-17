@@ -36,6 +36,10 @@ a {
     padding: 0 0.2rem;
 }
 
+svg {
+    @include fill('primary');
+}
+
 main,a,p,ul,ol,h1,h2,h3,h4,h5,h6,button,input {
     @each $theme, $colors in $themes {
 
